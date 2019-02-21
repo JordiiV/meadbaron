@@ -8,7 +8,7 @@ import '../components/main.scss'
 
 export const IndexPageTemplate = () => (
     <div>
-        <section className={"hero is-fullheight hero-foo is-medium is-hidden-mobile is-dark"}>
+        <section className={"hero is-fullheight hero-foo is-medium is-dark"}>
           <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
             <div className="container container-mobile" style={{ marginTop: "-8%", padding: "11% 13% 10% 5%" }}>
               <Typing>
@@ -28,7 +28,7 @@ export const IndexPageTemplate = () => (
         <div className="section">
           <div className="column is-12">
             <h3 className="has-text-weight-semibold is-size-2">
-              Latest stories
+              Last posts
                   </h3>
             <BlogRoll />
             <div className="column is-12 has-text-centered">
