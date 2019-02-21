@@ -1,86 +1,68 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import jQuery from 'jquery'
+import './main.scss'
 
-const Navbar = class extends React.Component {
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll('.navbar-burger'),
-      0
-    )
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target
-          const $target = document.getElementById(target)
+export default class Navbar extends React.Component {
 
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active')
-          $target.classList.toggle('is-active')
-        })
-      })
-    }
+  state = {
+    isHide: false
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.hideNavbar);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.hideNavbar);
+  }
+
+  crossBurguer = () => {
+    jQuery('#navbarMenuHeroA, .navbar-burger').toggleClass('is-active');
+  }
+
+  hideNavbar = () => {
+    let { isHide } = this.state
+    window.scrollY > this.prev ?
+      !isHide && this.setState({ isHide: true })
+      :
+      isHide && this.setState({ isHide: false })
+
+    this.prev = window.scrollY;
+  }
+
+
   render() {
+    let classHide = this.state.isHide ? "hide" : ""
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
+      <nav className={"navbar is-fixed-top " + classHide} style={{transitionDuration: "1s", marginBottom: '5%', backgroundColor: "#f1f1f1", height: "6%" }}>
+
+
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <Link to="/" className="navbar-item">
+              <figure className="image">
+                <img src={logo} alt="Rhino" style={{ width: '35px', height: "100%", maxHeight: "2.75rem" }} />
+              </figure>
             </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
+            <div class="navbar-burger burger" onClick={this.crossBurguer} data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
+          <div className="navbar-menu navbar-end" id="navbarMenuHeroA" style={{ backgroundColor: "#f1f1f1" }}>
+            <Link className='navbar-item' activeClassName="active" exact to="/about">
+              About
+            </Link>
+            <Link className='navbar-item' activeClassName="active" to="/blog">
+              Blog
+            </Link>
           </div>
         </div>
       </nav>
+
+
     )
   }
 }
-
-export default Navbar
