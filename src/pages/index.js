@@ -19,8 +19,6 @@ export const IndexPageTemplate = () => (
                 <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "4rem" }}>
                   I'm the Mead Baron
               </h1>
-                <Typing.Speed ms={10} />
-                <h2 className="title" style={{ color: 'red' }}>(This site is under construction!)</h2>
               </Typing>
             </div>
           </div>
