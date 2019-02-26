@@ -1,9 +1,3 @@
-.tabcontent {
-    display: none;
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
-  
-}
-
 .hero-foo{
     background: linear-gradient(-45deg, #EE7752, #e381ce, #23A6D5, #23D5AB);
 	background-size: 400% 400%;
@@ -47,22 +41,6 @@
 	100% {
 		background-position: 0% 50%
 	}
-}
-
-.header-image-desktop{
-    background-color: rgb(255, 255, 255);
-}
-
-.margin3{
-    margin:1%;
-}
-
-.is-myself{
-    width: 50%;
-}
-
-.menu-list a {
-    padding: 0em 0.75em;
 }
 
 /* Go from zero to full opacity */
@@ -139,76 +117,14 @@ a{
 p{
 	font-size:25px;
 }
-.t1{
-	padding-top:100%;	
-	background-position: center;
-	background-image:url(https://i.gyazo.com/2418594c41c83172090b4909a7d82c08.png);
-  }
-
-.t2{
-	padding-top:100%;
-	background-image:url(https://i.gyazo.com/5624879188ce27893d12fdb121c6cd78.png);
-	background-position: center;
-	background-size: 150%;
-
-
-  }
-
-.t1:hover, .t1.active{
-	background-image:url(https://vignette.wikia.nocookie.net/game-concepts-and-ideas/images/4/4b/77307-playing-videogame-gif-Nh7l_zps4ff57164.gif/revision/latest?cb=20150829210220);
-	background-position: center;
-  }
-  .t1:hover::before, .t1.active::before{
-	 background: url(https://vignette.wikia.nocookie.net/game-concepts-and-ideas/images/4/4b/77307-playing-videogame-gif-Nh7l_zps4ff57164.gif/revision/latest?cb=20150829210220) 0 0 no-repeat;
-  }
-  .t2:hover, .t2.active{
-	background-image:url(https://i.imgur.com/9uQCqTn.gif);
-	background-position: center;
-	background-size: 150%;
-  }
-  .t2:hover::before, .t2.active::before{
-	background: url(https://i.imgur.com/9uQCqTn.gif) 0 0 no-repeat;
-}
-
-#space{
-	max-width:-webkit-fill-available;
-	background: rgba(255, 255, 255, 0.2) url("http://pavbca.com/walldb/original/0/4/1/168588.jpg") no-repeat 0 50%;
-	.content{
-		
-		// max-height: 650px;
-	}
-	#canvasBack{
-		height:-webkit-fill-available;
-	}
-	
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-	width: 120px;
-	margin:100%;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
 
 .hide{
 	top:-60px !important;
 	transition: top 1s ease 0s;
+}
+
+
+.marginTop2{
+	margin-top: 5% !important
+
 }

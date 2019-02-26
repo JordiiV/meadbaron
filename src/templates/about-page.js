@@ -2,16 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import AOS from 'aos';
 import Content, { HTMLContent } from '../components/Content'
+
 import '../components/main.scss'
 import '../components/all.sass'
+import 'aos/dist/aos.css';
 
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
+AOS.init()
+
+
   return (
-    <section className="">
+    <section className="section">
       <div className="container">
         <div className="content">
           <div
@@ -28,21 +34,21 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                 </h1>
           </div>
         </div>
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+        
             <div className="section">
               <div className={"content is-large"}>
-                <div id="intro" class="content">
-                  <p style={{ fontSize: "28px" }}>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> or <span className="has-text-weight-bold">in my professional career</span> please, continue reading.
+                <div id="intro" class="content" style={{ marginTop: "5%", marginBottom: "10%" }}>
+                  <p style={{ fontSize: "28px" }}>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> or in my<span className="has-text-weight-bold"> professional career</span> please, continue reading.
                     </p>
                   <p className="" style={{ fontSize: "28px" }}>Otherwise, If you just want my <span className="has-text-weight-bold">curriculum vitae</span> you can download <a style={{ fontSize: "30px" }} className="cvButton" download="curriculum" rel="noopener noreferrer" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
                 </div>
               </div>
+              
               <PageContent className="content" content={content} />
+              
             </div>
           </div>
-        </div>
-      </div>
+ 
     </section>
   )
 }
