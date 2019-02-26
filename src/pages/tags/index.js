@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
+import '../../components/main.scss'
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -18,7 +20,7 @@ const TagsPage = ({
       <div className="container content">
         <div className="columns">
           <div
-            className="column is-10 is-offset-1"
+            className="column is-10 is-offset-1 marginTop2"
             style={{ marginBottom: '6rem' }}
           >
             <h1 className="title is-size-2 is-bold-light">Tags</h1>

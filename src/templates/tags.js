@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+import '../components/main.scss'
+
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
@@ -27,7 +29,7 @@ class TagRoute extends React.Component {
           <div className="container content">
             <div className="columns">
               <div
-                className="column is-10 is-offset-1"
+                className="column is-10 is-offset-1 marginTop2"
                 style={{ marginBottom: '6rem' }}
               >
                 <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
