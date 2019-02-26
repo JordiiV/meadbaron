@@ -19,7 +19,12 @@ export const IndexPageTemplate = () => (
                 <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "4rem" }}>
                   I'm the Mead Baron
               </h1>
+              <Typing.Speed ms={50} />
+                <h1 className="title" style={{ color: 'black', fontWeight: "500", fontSize: "2rem" }}>
+                  Front-end developer
+              </h1>
               </Typing>
+              
             </div>
           </div>
         </section>

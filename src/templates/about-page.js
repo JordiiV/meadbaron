@@ -13,9 +13,6 @@ import 'aos/dist/aos.css';
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
-AOS.init()
-
-
   return (
     <section className="section">
       <div className="container">
@@ -59,9 +56,18 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+export class AboutPage extends React.Component {
 
+  componentDidMount(){
+    this.aos = AOS
+    this.aos.init()
+  }
+  render(){
+    const isBrowser = typeof document !== 'undefined';
+    const AOS = isBrowser ? require('aos') : undefined;
+    const data = this.props.data
+    const { markdownRemark: post } = data
+    
   return (
     <Layout>
       <AboutPageTemplate
@@ -71,6 +77,7 @@ const AboutPage = ({ data }) => {
       />
     </Layout>
   )
+}
 }
 
 AboutPage.propTypes = {
