@@ -14,9 +14,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
+    <Layout>
     <section className="section">
-      <div className="container">
-        <div className="content">
+      <div className="container">        
           <div
             className="full-width-image-container margin-top-0 hero-foo"
           >
@@ -30,10 +30,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                 About me
                 </h1>
           </div>
-        </div>
         
             <div className="section">
-              <div className={"content is-large"}>
+              <div className={"container"}>
                 <div id="intro" class="content" style={{ marginTop: "5%", marginBottom: "10%" }}>
                   <p style={{ fontSize: "28px" }}>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> or in my<span className="has-text-weight-bold"> professional career</span> please, continue reading.
                     </p>
@@ -44,9 +43,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               <PageContent className="content" content={content} />
               
             </div>
-          </div>
- 
+          </div> 
     </section>
+    
+    </Layout>
   )
 }
 
@@ -69,13 +69,12 @@ export class AboutPage extends React.Component {
     const { markdownRemark: post } = data
     
   return (
-    <Layout>
+    
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
       />
-    </Layout>
   )
 }
 }

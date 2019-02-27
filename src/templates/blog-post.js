@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 import '../components/main.scss'
+import '../components/all.sass'
 
 export const BlogPostTemplate = ({
   content,

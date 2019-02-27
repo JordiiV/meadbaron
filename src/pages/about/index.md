@@ -26,9 +26,9 @@ Actually i work in a tech consultancy here in BCN with front-end techs like HTML
 </div>
 
 <div class="about-image column is-half"
-    data-aos="fade-left"
+    data-aos="fade-right"
     data-aos-offset="100"
-    data-aos-delay="50"
+    data-aos-delay="300"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-mirror="true"
@@ -65,9 +65,9 @@ Yeah, 2017 was a year full of changes for me, but i dont regret about a thing, b
 </div>
 
 <div class="about-image column is-half"
-    data-aos="fade-left"
+    data-aos="fade-right"
     data-aos-offset="100"
-    data-aos-delay="50"
+    data-aos-delay="300"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-mirror="true"
@@ -104,9 +104,9 @@ The fact is that I always see they working in their gardens and enjoying it, and
 </div>
 
 <div class="about-image column is-half"
-    data-aos="fade-left"
+    data-aos="fade-right"
     data-aos-offset="100"
-    data-aos-delay="50"
+    data-aos-delay="300"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-mirror="true"
@@ -143,9 +143,9 @@ I started to dive in the sea and pools before i learned to swim (obvious no? if 
 </div>
 
 <div class="about-image column is-half"
-    data-aos="fade-left"
+    data-aos="fade-right"
     data-aos-offset="50"
-    data-aos-delay="50"
+    data-aos-delay="300"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     data-aos-mirror="true"

@@ -15,7 +15,7 @@ export default class BlogIndexPage extends React.Component {
                 className="full-width-image-container margin-top-0 hero-foo"
               >
                 <h1
-                  className="has-text-weight-bold is-size-1 marginTop2"
+                  className="has-text-weight-bold is-size-1 "
                   style={{
                     color: 'white',
                     margin: '2rem',

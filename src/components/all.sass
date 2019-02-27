@@ -1,4 +1,10 @@
-@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/bulma.sass";
+@import "bulma/sass/utilities/_all.sass"
+@import "bulma/sass/grid/columns.sass"
+@import "bulma/sass/base/_all.sass"
+@import "bulma/sass/components/_all.sass"
+@import "bulma/sass/elements/_all.sass"
+
 
 // Config vars
 // Kalidi logo brand color: #FD461E
@@ -28,10 +34,13 @@ $black: #2b2523
     margin-bottom: 1.5rem
     margin-top: 0
 
+.is-hidden-desk
+    display: none !important
+
 // Helper Classes
 .full-width-image-container
   width: 100vw
-  height: 225px
+  height: 150px
   position: relative
   left: 50%
   right: 50%
