@@ -36,7 +36,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                 <div id="intro" class="content" style={{ marginTop: "5%", marginBottom: "10%" }}>
                   <p style={{ fontSize: "28px" }}>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> or in my<span className="has-text-weight-bold"> professional career</span> please, continue reading.
                     </p>
-                  <p className="" style={{ fontSize: "28px" }}>Otherwise, If you just want my <span className="has-text-weight-bold">curriculum vitae</span> you can download <a style={{ fontSize: "30px" }} className="cvButton" download="curriculum" rel="noopener noreferrer" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
+                  <p className="" style={{ fontSize: "28px" }}>Otherwise, If you just want my <span className="has-text-weight-bold">curriculum vitae</span> you can download <a style={{ fontSize: "30px" }} className="cvButton" download="curriculum" rel="noopener noreferrer" target="_blank" href="https://drive.google.com/open?id=19axsHTAfwKtm2BgqthGm3-MLhtaFzIwg">HERE</a></p>
                 </div>
               </div>
               
